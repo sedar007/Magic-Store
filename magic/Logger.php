@@ -4,7 +4,6 @@ namespace magic;
 
 class Logger{
     private $users = array(
-        'lala'=> 'Lala-Britta',
         'sedar' =>'theGoat',
         'stark'=> 'warmachinerox'
     );
