@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Pirata One', cursive;
+    margin: 0;
+}
+html, body {
+    height: 100vh;
+    /*width: 99vw;*/
+}
+
+/*Header*/
+.head{
+    flex: 0.5;
+    background-color: #212529!important;
+    width: 100vw;
+    max-height: 70px;
+    margin: 0;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: row;
+    /*font-size: 30px;*/
+    justify-content: space-between;
+    /*position: relative;*/
+}
+
+.head-left{
+    /*background-color: yellow;*/
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.head-right{
+    /*background-color: red;*/
+    /*width: 15px;*/
+    margin-right: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.head a,
+.btn-style{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.title-head,
+.menu{
+    margin-left: 20px;
+}
+.menu{
+    display: grid;
+    /*width: 50vw;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    /*grid-template-rows: 1fr;*/
+    background-color: yellow;
+}
+button{
+    cursor: pointer;
+    font-family: 'Pirata One', cursive;
+
+}
+.title-head{
+    font-size: 50px;
+}
+.btn-style{
+    background-color: #212529;
+    border-radius: 3px;
+    border:none #212529 ;
+    padding: 5px;
+
+
+}
+
+#btn-browse,#btn-shop{
+    margin-left: 10px;
+    /*margin-left: 2% ;*/
+}
+.head .btn-style{
+    font-size: 20px;
+}
+
+/*#btn-login, .dropdown{*/
+/*    position: absolute;*/
+/*    right: 3%;*/
+/*}*/
+
+/*#btn-cart{*/
+/*    position: absolute;*/
+/*    right: 12%;*/
+/*}*/
+.dropdown-menu{
+    background: none;
+    border: none;
+}
+.drop-btn{
+    margin-top: 1%;
+}
+
+/*.dropdown-menu .show {*/
+/*    inset: 12% auto auto;*/
+/*    margin-top: 10px;*/
+/*}*/
+/*.head .btn:hover{*/
+/*    background-color: black;*/
+/*}*/
+.btn-style:hover{
+        background-color: black;
+
+}
+
+
+
+#container{
+    background-image: url("../images/MagicBG2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    flex: 1;
+    display: flex;
+    /*flex-direction: column;*/
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.title-index{
+    margin-top: 55px;
+    font-size: 60px;
+}
+.Bienvenue-index{
+    margin-top: 40px;
+    font-size: 60px;
+
+}
+.content-index{
+    /*display: grid;*/
+}
+.browse{
+    display: grid;
+    grid-template-rows: 5% 95% ;
+    width: 90%;
+    max-height: 90vh;
+
+
+}
+.title-browse a{
+    color: white;
+}
+.title-browse{
+    margin-top: 2% ;
+    font-size: 20px;
+    max-height: 5%;
+}
+.container-browse{
+    margin-top: 5%;
+    /*max-height: 100%;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: center;
+    /*padding-top: 2%;*/
+
+}
+.container-browse::-webkit-scrollbar {
+    display: none;
+}
+.carte{
+    margin: 1%;
+    padding: 1%;
+    border: solid 0.01cm #212529;
+    /*width: 180px;*/
+    border-radius: 5px;
+    box-shadow: 15px -15px 40px black inset;
+    max-height: 300px;
+
+}
+.carte img{
+    width: 180px;
+}
+
+.form-container{
+    /*background-color: yellow;*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formulaire{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    height: 300px;
+    margin: 15px auto;
+    font-family: 'Pirata One', cursive;
+
+}
+
+.formulaire,
+.errMsg{
+    background-color: white;
+
+    width: 370px;
+    border-radius: 5px;
+}
+.form-entete{
+    margin: auto;
+    /*padding-top: ;*/
+    /*padding-bottom: 15px;*/
+    color: black;
+    font-size: 40px;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "ps"
+    "pw"
+    "btn-s";
+}
+
+#pseudo{
+    grid-area: ps;
+}
+#psw{
+    grid-area: pw;
+}
+#btn-submit{
+    grid-area: btn-s;
+    margin: 10px 10%;
+    height: 30px;
+
+}
+
+.form-login-input{
+    font-family: 'Pirata One', cursive;
+
+    margin: 5px 10%;
+    height: 40%;
+}
+
+.errMsg{
+    color: white;
+    text-align: center;
+    /*background-color: white;*/
+    /*width: 250px;*/
+    /*height: 50px;*/
+    display: flex;
+}
+.errMsg span{
+    margin: auto;
+    color: red;
+    font-size: 25px;
+}
+
+/************************ shop *****************************************/
+
+#content-shop{
+    display: grid;
+    grid-template-rows: 5% 95% ;
+    width: 90%;
+    max-height: 90vh;
+
+}
+.header-shop{
+    margin-top: 1%;
+}
+.container-shop{
+    margin-top: 5%;
+    /*max-height: 100%;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: center;
+    /*padding-top: 2%;*/
+}
+.container-shop::-webkit-scrollbar {
+    display: none;
+}
+.header-shop{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#selection-shop{
+    font-size: 35px;
+}
+#addCart{
+    font-size: 20px;
+}
+.description-carte{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#id-carte{
+    /*border: solid;*/
+    /*border-radius:50px ;*/
+
+    /*transform: rotate(45deg);*/
+}
+.active-selection{
+    background-color: orange;
+}
+.addCart-disable{
+    opacity: 0.5;
+    pointer-events: none;
+
+}
+
+/************************* Cart ******************************/
+#container-cart{
+    display: grid;
+    grid-template-rows: 5% 95% ;
+    width: 90%;
+    max-height: 90vh;
+}
+.entete-cart{
+    margin-top: 1%;
+}
+#affiche-cart{
+ margin-top: 5%;
+    /*max-height: 100%;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: center;
+   }
+
+#affiche-cart::-webkit-scrollbar {
+    display: none;
+}
+
+.entete-cart{
+    font-size: 35px;
+}
+
+.carte-cart{
+    margin: 1%;
+    padding: 1%;
+    border: solid 0.01cm #212529;
+    /*width: 180px;*/
+    border-radius: 5px;
+    box-shadow: 15px -15px 40px black inset;
+    max-height: 300px;
+
+}
+.carte-cart img{
+    width: 180px;
+}
+.qte-cart{
+    margin-left: 5px;
+    background-color: white;
+    color: #212529;
+    border: 1px;
+    width: 20px;
+    height: 20px;
+}
+/**************************Update ****************************/
+#container-update{
+    display: grid;
+    grid-template-rows: 5% 5% 90% ;
+    width: 90%;
+    max-height: 90vh;
+}
+#bouton-update{
+    margin-top: 2%;
+    height: 50px;
+    background-color: red;
+
+}
+#bouton-update:hover {
+    background-color: darkred;
+
+}
+
+.carte-cart .qte-cart{
+    padding-left: 2px;
+    margin-left: 5px;
+    background-color: white;
+    color: #212529;
+    border: 1px red;
+    width: 25px;
+    height: 25px;
+}
+
+/************************* FOOTER ****************************/
+.footer{
+    flex: 0.1;
+    max-height: 40px;
+    display: grid;
+    place-content: center;
+}
+
+.footer a,
+.footer a:visited{
+    color: blue;
+}
+.btn-visible{
+    display: none;
+}
