@@ -139,6 +139,23 @@ button{
     margin-top: 55px;
     font-size: 60px;
 }
+@media (max-width: 638px) {
+    .title-index {
+        font-size: 50px;
+    }
+
+}
+@media (max-width: 540px) {
+    .title-index {
+        font-size: 40px;
+    }
+}
+@media (max-width: 437px) {
+    .title-index {
+        font-size: 30px;
+    }
+
+}
 .Bienvenue-index{
     margin-top: 40px;
     font-size: 60px;
@@ -426,3 +443,8 @@ form{
 	font-family: normal;
 	font-size: 20px
 }
+/*.title-index{*/
+/*    background-color: blue;*/
+/*    font-size: ;*/
+/*    max-width: 95vw;*/
+/*}*/

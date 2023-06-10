@@ -2,48 +2,39 @@
 
 namespace magic;
 
-
-
 class Cart{
-    private array $content = array(
-        'paul'=>1
-);
+
+    private $content = null;
 
     public function __construct(){
         if(isset($_SESSION['cart']))
             $this->content = $_SESSION['cart'];
+        else
+            $this->content = array() ;
     }
 
     public function add(array $selection): void{
-
         foreach ( $selection as $value ){
             if(array_key_exists($value, $this->content))
                 $this->content[$value] +=1;
             else
                 $this->content[$value] = 1;
         }
-
         $_SESSION['cart'] = $this->content;
-
     }
 
     public function update(array $cart): void{
         foreach ( $cart as $key=> $value ){
-            if( $value > 0) {
+            if( $value > 0) 
                 $value += 1;
-            }
             else
                 unset($cart[$key]);
         }
-
-
         $_SESSION['cart'] =$cart;
 
         header("Location:". $GLOBALS['DOCUMENT_DIR']."pages/cart.php");
-			exit();
-
-//        $this::render();
-}
+		exit();
+    }
 
     public static function render() : void{?>
 
@@ -52,7 +43,7 @@ class Cart{
         <!-- Démarre le buffering -->
         <?php ob_start() ?>
 
-            <?php
+        <?php
         $json = file_get_contents($GLOBALS['PHP_DIR']."data/cards.json") ;
         $data = (array) json_decode($json) ;
         ?>
@@ -60,16 +51,15 @@ class Cart{
         <form id="container-update" action="<?php echo $GLOBALS['DOCUMENT_DIR'] ?>pages/update_cart.php" method="post" >
 
             <div class="entete-cart">
-                Cart : <span id="cout-total-cart">
-                    0
-                </span>
+                Cart : <span id="cout-total-cart"> 0 </span>
             </div>
+
             <button type = "submit" id="bouton-update" class="btn-style">UPDATE CART</button>
 
             <div id="affiche-cart">
                 <?php foreach ( $_SESSION['cart'] as $key => $value ){
-                if($key == "paul" )
-                    continue;
+                // if($key == "paul" )
+                //     continue;
 
                 $cart = $data[$key];
                 $name = $cart->name;
